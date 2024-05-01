@@ -11,17 +11,17 @@ import * as buildRunner from "./runMatlabBuild"
  * Gather action inputs and then run action.
  */
 async function run() {
-//     const platform = process.platform;
-//     const architecture = process.arch;
-//     const workspaceDir = process.cwd();
+    const platform = process.platform;
+    const architecture = process.arch;
+    const workspaceDir = process.cwd();
 
 //     // Export env variable to inject the buildtool plugin
 //     core.exportVariable('MW_MATLAB_BUILDTOOL_DEFAULT_PLUGINS_FCN_OVERRIDE', 'matlab.ciplugins.github.getDefaultPlugins');
 
-//     const options: buildtool.RunBuildOptions = {
-//         Tasks: core.getInput("tasks"),
-//         BuildOptions: core.getInput("build-options"),
-//     };
+    const options: buildtool.RunBuildOptions = {
+        Tasks: core.getInput("tasks"),
+        BuildOptions: core.getInput("build-options"),
+    };
 
 //     const command = buildtool.generateCommand(options);
 //     const startupOptions = core.getInput("startup-options").split(" ");
