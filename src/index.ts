@@ -75,7 +75,7 @@ async function run() {
 
     await core.summary
     .addRaw(`<head><style>
-        summary {list-style-type: '✅';}
+        details > summary {list-style-type: '✅';}
         </style></head>`, true)
     .addRaw(`<table>
     <tr>
