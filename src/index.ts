@@ -74,6 +74,9 @@ async function run() {
     // .write()
 
     await core.summary
+    .addRaw(`<head><style>
+        summary {list-style-type: '✅';}
+        </style></head>`, true)
     .addRaw(`<table>
     <tr>
       <th>Company</th>
@@ -91,11 +94,7 @@ async function run() {
       <td>Mexico</td>
     </tr>
     </table>`, true)
-    .addRaw('<details> <summary>Click me</summary> </details>')
-    .addRaw(`<style>
-        summary {list-style-type: '✅';}
-        </style>
-    `)
+    .addRaw('<details> <summary>Click me</summary> </details>', true)
     .write()
 
     // Cleanup post run for self hosted runners
