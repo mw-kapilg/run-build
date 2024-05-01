@@ -63,10 +63,11 @@ async function run() {
     .addHeading('MATLAB Test Results')
     //.addCodeBlock(generateTestResults(), "js")
     .addTable([
-        [{data: 'Task Name', header: true}, {data: 'Status', header: true}, {data: 'Description', header: true}, {data: 'Duration (HH:MM:SS)', header: true}],
-        ['build', 'Pass ✅', 'Builds the code', '00:00:01'],
-        ['test', 'Fail ❌', 'Run tests', '00:00:05'],
-        ['verify', 'Skipped 🚫', 'Runs static analysis', '00:00:00']
+        [{data: 'Test Name', header: true}, {data: 'Diagnostics', header: true}, {data: 'Duration', header: true}],
+        ['✅ TestFile1', '', '0.01s'],
+        ['✅ TestFile2', '', '0.02s'],
+        ['❌ TestFile3', 'Stack trace', '5.00s'],
+        [core.summary.addRaw('lorem in table'), '', '']
     ])
     .addDetails('lorem', 'ipsum')
     // .addLink('View detailed test result', 'https://github.com')
