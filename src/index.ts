@@ -90,7 +90,8 @@ async function run() {
       <td>Francisco Chang</td>
       <td>Mexico</td>
     </tr>
-    </table>`)
+    </table>`, true)
+    .addRaw('<details> <summary>Click me</summary> </details>')
     .write()
 
     // Cleanup post run for self hosted runners
