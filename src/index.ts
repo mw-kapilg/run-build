@@ -92,9 +92,10 @@ async function run() {
     </tr>
     </table>`, true)
     .addRaw('<details> <summary>Click me</summary> </details>')
-    .addRaw(`details > summary {
-        list-style-type: '✅';
-    }`)
+    .addRaw(`<style>
+        summary {list-style-type: '✅';}
+        </style>
+    `)
     .write()
 
     // Cleanup post run for self hosted runners
