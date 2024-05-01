@@ -74,9 +74,13 @@ async function run() {
     // .write()
 
     await core.summary
-    .addRaw(`<head><style>
-        details > summary {list-style-type: '✅';}
-        </style></head>`, true)
+    .addRaw(`<head>
+        <style>
+        details > summary {
+            list-style: '✅';
+        }
+        </style>
+        </head>`, true)
     .addRaw(`<table>
     <tr>
       <th>Company</th>
