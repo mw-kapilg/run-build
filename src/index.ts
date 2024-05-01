@@ -67,7 +67,7 @@ async function run() {
         ['✅ TestFile1', '', '0.01s'],
         ['✅ TestFile2', '', '0.02s'],
         ['❌ TestFile3', 'Stack trace', '5.00s'],
-        [core.summary.addRaw('lorem in table'), '', '']
+        // [core.summary.addRaw('lorem in table'), '', '']
     ])
     .addDetails('lorem', 'ipsum')
     // .addLink('View detailed test result', 'https://github.com')
