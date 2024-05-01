@@ -90,7 +90,8 @@ async function run() {
       <td>Francisco Chang</td>
       <td>Mexico</td>
     </tr>
-  </table>`)
+    </table>`)
+    .write()
 
     // Cleanup post run for self hosted runners
     // await io.rmRF(workspaceDir + '/.matlab');
