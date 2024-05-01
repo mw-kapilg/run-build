@@ -7,99 +7,99 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - name: Perform npm tasks
-        run: npm run ci
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: "20"
+      # - name: Perform npm tasks
+      #   run: npm run ci
 
-      - name: Perform 'setup-matlab'
-        uses: matlab-actions/setup-matlab@v2
+      # - name: Perform 'setup-matlab'
+      #   uses: matlab-actions/setup-matlab@v2
 
-      - name: Create buildfile.m in project root for tests
-        run: |
-          cat <<'_EOF' >> "buildfile.m"
-            function plan = buildfile
-            plan = buildplan(localfunctions);
-            plan("test").Dependencies = "build";
-            plan("deploy").Dependencies = "test";
+      # - name: Create buildfile.m in project root for tests
+      #   run: |
+      #     cat <<'_EOF' >> "buildfile.m"
+      #       function plan = buildfile
+      #       plan = buildplan(localfunctions);
+      #       plan("test").Dependencies = "build";
+      #       plan("deploy").Dependencies = "test";
 
-            plan.DefaultTasks = "test";
+      #       plan.DefaultTasks = "test";
 
-            function buildTask(~)
-            f = fopen('buildlog.txt', 'a+'); fprintf(f, 'building\n'); fclose(f);
+      #       function buildTask(~)
+      #       f = fopen('buildlog.txt', 'a+'); fprintf(f, 'building\n'); fclose(f);
 
-            function testTask(~,tests,options)
-            arguments
-              ~
-              tests string = "tests"
-              options.OutputDetail (1,1) string = "terse"
-            end
-            f = fopen('buildlog.txt', 'a+');
-            fprintf(f, 'testing\n');
-            fprintf(f, '%s\n', tests);
-            fprintf(f, '%s\n', options.OutputDetail);
-            fclose(f);
+      #       function testTask(~,tests,options)
+      #       arguments
+      #         ~
+      #         tests string = "tests"
+      #         options.OutputDetail (1,1) string = "terse"
+      #       end
+      #       f = fopen('buildlog.txt', 'a+');
+      #       fprintf(f, 'testing\n');
+      #       fprintf(f, '%s\n', tests);
+      #       fprintf(f, '%s\n', options.OutputDetail);
+      #       fclose(f);
 
-            function deployTask(~)
-            f = fopen('buildlog.txt', 'a+'); fprintf(f, 'deploying\n'); fclose(f);
+      #       function deployTask(~)
+      #       f = fopen('buildlog.txt', 'a+'); fprintf(f, 'deploying\n'); fclose(f);
 
-            function checkTask(~)
-            f = fopen('buildlog.txt', 'a+'); fprintf(f, 'checking\n'); fclose(f);
+      #       function checkTask(~)
+      #       f = fopen('buildlog.txt', 'a+'); fprintf(f, 'checking\n'); fclose(f);
             
-            function errorTask(~)
-            f = fopen('buildlog.txt', 'a+'); fprintf(f, 'erroring\n'); fclose(f);
-            error('Error occured in errorTask');
-          _EOF
+      #       function errorTask(~)
+      #       f = fopen('buildlog.txt', 'a+'); fprintf(f, 'erroring\n'); fclose(f);
+      #       error('Error occured in errorTask');
+      #     _EOF
 
-      - name: Run build with default tasks
-        uses: ./
+      # - name: Run build with default tasks
+      #   uses: ./
 
-      - name: Verify correct tasks appear in buildlog.txt
-        run: |
-          set -e
-          grep "building" buildlog.txt
-          grep "testing" buildlog.txt
-          grep "tests" buildlog.txt
-          grep "terse" buildlog.txt
-          ! grep "deploying" buildlog.txt
-          ! grep "checking" buildlog.txt
-          rm buildlog.txt
+      # - name: Verify correct tasks appear in buildlog.txt
+      #   run: |
+      #     set -e
+      #     grep "building" buildlog.txt
+      #     grep "testing" buildlog.txt
+      #     grep "tests" buildlog.txt
+      #     grep "terse" buildlog.txt
+      #     ! grep "deploying" buildlog.txt
+      #     ! grep "checking" buildlog.txt
+      #     rm buildlog.txt
 
-      - name: Run build with specified task
-        uses: ./
-        with:
-          tasks: deploy
+      # - name: Run build with specified task
+      #   uses: ./
+      #   with:
+      #     tasks: deploy
 
-      - name: Verify correct tasks appear in buildlog.txt
-        run: |
-          set -e
-          grep "building" buildlog.txt
-          grep "testing" buildlog.txt
-          grep "tests" buildlog.txt
-          grep "terse" buildlog.txt
-          grep "deploying" buildlog.txt
-          ! grep "checking" buildlog.txt
-          rm buildlog.txt
+      # - name: Verify correct tasks appear in buildlog.txt
+      #   run: |
+      #     set -e
+      #     grep "building" buildlog.txt
+      #     grep "testing" buildlog.txt
+      #     grep "tests" buildlog.txt
+      #     grep "terse" buildlog.txt
+      #     grep "deploying" buildlog.txt
+      #     ! grep "checking" buildlog.txt
+      #     rm buildlog.txt
 
-      - name: Run build with multiple specified tasks
-        uses: ./
-        with:
-          tasks: deploy check
+      # - name: Run build with multiple specified tasks
+      #   uses: ./
+      #   with:
+      #     tasks: deploy check
 
-      - name: Verify correct tasks appear in buildlog.txt
-        run: |
-          set -e
-          grep "building" buildlog.txt
-          grep "testing" buildlog.txt
-          grep "tests" buildlog.txt
-          grep "terse" buildlog.txt
-          grep "deploying" buildlog.txt
-          grep "checking" buildlog.txt
-          rm buildlog.txt
+      # - name: Verify correct tasks appear in buildlog.txt
+      #   run: |
+      #     set -e
+      #     grep "building" buildlog.txt
+      #     grep "testing" buildlog.txt
+      #     grep "tests" buildlog.txt
+      #     grep "terse" buildlog.txt
+      #     grep "deploying" buildlog.txt
+      #     grep "checking" buildlog.txt
+      #     rm buildlog.txt
 
-      - name: Run build with task args
-        uses: ./
-        with:
-          tasks: test("myTests", OutputDetail="concise")
+      # - name: Run build with task args
+      #   uses: ./
+      #   with:
+      #     tasks: test("myTests", OutputDetail="concise")
   

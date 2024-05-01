@@ -58,6 +58,20 @@ async function run() {
      .addLink('View detailed build result', 'https://github.com')
      .write()
 
+    //Test results in summary
+    await core.summary
+    .addHeading('MATLAB Test Results')
+    //.addCodeBlock(generateTestResults(), "js")
+    .addTable([
+        [{data: 'Task Name', header: true}, {data: 'Status', header: true}, {data: 'Description', header: true}, {data: 'Duration (HH:MM:SS)', header: true}],
+        ['build', 'Pass ✅', 'Builds the code', '00:00:01'],
+        ['test', 'Fail ❌', 'Run tests', '00:00:05'],
+        ['verify', 'Skipped 🚫', 'Runs static analysis', '00:00:00']
+    ])
+    .addDetails('lorem', 'ipsum')
+    // .addLink('View detailed test result', 'https://github.com')
+    .write()
+
     // Cleanup post run for self hosted runners
     await io.rmRF(workspaceDir + '/.matlab');
 
