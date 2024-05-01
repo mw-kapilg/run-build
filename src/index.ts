@@ -58,20 +58,20 @@ async function run() {
 //      .addLink('View detailed build result', 'https://github.com')
 //      .write()
 
-    //Test results in summary
-    await core.summary
-    .addHeading('MATLAB Test Results')
-    //.addCodeBlock(generateTestResults(), "js")
-    .addTable([
-        [{data: 'Test Name', header: true}, {data: 'Diagnostics', header: true}, {data: 'Duration', header: true}],
-        ['✅ TestFile1', '', '0.01s'],
-        ['✅ TestFile2', '', '0.02s'],
-        ['❌ TestFile3', 'Stack trace', '5.00s'],
-        // [core.summary.addRaw('lorem in table'), '', '']
-    ])
-    .addDetails('lorem', 'ipsum')
-    // .addLink('View detailed test result', 'https://github.com')
-    .write()
+    // //Test results in summary
+    // await core.summary
+    // .addHeading('MATLAB Test Results')
+    // //.addCodeBlock(generateTestResults(), "js")
+    // .addTable([
+    //     [{data: 'Test Name', header: true}, {data: 'Diagnostics', header: true}, {data: 'Duration', header: true}],
+    //     ['✅ TestFile1', '', '0.01s'],
+    //     ['✅ TestFile2', '', '0.02s'],
+    //     ['❌ TestFile3', 'Stack trace', '5.00s'],
+    //     // [core.summary.addRaw('lorem in table'), '', '']
+    // ])
+    // .addDetails('lorem', 'ipsum')
+    // // .addLink('View detailed test result', 'https://github.com')
+    // .write()
 
     await core.summary
     .addRaw(`<table>
@@ -86,7 +86,7 @@ async function run() {
       <td>Germany</td>
     </tr>
     <tr>
-      <td>Centro comercial Moctezuma</td>
+      <td><details> <summary>Click me</summary> </details></td>
       <td>Francisco Chang</td>
       <td>Mexico</td>
     </tr>
