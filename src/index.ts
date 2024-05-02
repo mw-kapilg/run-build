@@ -75,7 +75,8 @@ async function run() {
 
     await core.summary
     .addHeading('MATLAB Test Results')
-    .addRaw(`<table>
+    .addRaw(`<button type="button">Click Me!</button>
+    <table>
     <tr>
       <th>Test Name</th>
       <th>Diagnostics</th>
