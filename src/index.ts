@@ -89,7 +89,7 @@ async function run() {
         </p>
       </details></td>
       <td></td>
-      <td>0.01s</td>
+      <td valign="top">0.01s</td>
     </tr>
     <tr>
       <td><details> <summary>TestFile 2 ✅</summary></details></td>
