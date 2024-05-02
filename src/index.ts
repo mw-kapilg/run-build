@@ -96,19 +96,20 @@ async function run() {
       <td>0.02s</td>
     </tr>
     <tr>
-      <td><details> <summary>TestFile 3 ❌</summary> 
-      <ul style="list-style-type:none;">
-        <li>Test 3_1 ✅</li>
-        <li>Test 3_2 ❌</li>
-        <li>Test 3_3 ✅</li>
-        </ul>
-        <p>Test 3_1</p>
-        <p>Test 3_2</p>
-        <p>Test 3_1</br>
-        Test 3_2
+      <td><details> <summary>TestFile 3 ❌</summary>
+        <p>
+        Test 3_1 ✅</br>
+        Test 3_2 ❌</br>
+        Test 3_3 ✅</br>
         </p>
       </details></td>
-      <td></td>
+      <td>
+      <p>
+        </br>
+        <details> <summary>Stack trace</summary></br>
+        </br>
+      </p>
+      </td>
       <td>5.00s</td>
     </tr>
     </table>`, true)
