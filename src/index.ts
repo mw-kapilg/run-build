@@ -73,13 +73,11 @@ async function run() {
     // // .addLink('View detailed test result', 'https://github.com')
     // .write()
 
-    await core.summary
-    // .addRaw(`<style>
-    //     details > summary {
-    //         list-style-type: 'a';
-    //     }
-    //     </style>`, true)
-    .addRaw(`<table>
+    await core.Summary
+    .addHeading('MATLAB Test Results')
+    .addRaw(`
+    <button type="button">Click Me!</button>
+    <table>
     <tr>
       <th>Test Name</th>
       <th>Diagnostics</th>
