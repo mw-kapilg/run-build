@@ -101,7 +101,7 @@ async function run() {
         <p>
         Test 3_1 ✅</br>
         Test 3_2 ❌</br>
-        Test 3_3 ✅</br>
+        Test 3_3 ✅
         </p>
       </details></td>
       <td>
