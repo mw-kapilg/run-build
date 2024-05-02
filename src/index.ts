@@ -74,29 +74,34 @@ async function run() {
     // .write()
 
     await core.summary
-    .addRaw(`<style>
-        details > summary {
-            list-style-type: 'a';
-        }
-        </style>`, true)
+    // .addRaw(`<style>
+    //     details > summary {
+    //         list-style-type: 'a';
+    //     }
+    //     </style>`, true)
     .addRaw(`<table>
     <tr>
-      <th>Company</th>
-      <th>Contact</th>
-      <th>Country</th>
+      <th>Test Name</th>
+      <th>Diagnostics</th>
+      <th>Duration</th>
     </tr>
     <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Maria Anders</td>
-      <td>Germany</td>
+      <td>TestFile1 ✅</td>
+      <td></td>
+      <td>0.01s</td>
     </tr>
     <tr>
-      <td><details> <summary>Click me</summary> </details></td>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
+      <td>TestFile2 ✅</td>
+      <td></td>
+      <td>0.02s</td>
+    </tr>
+    <tr>
+      <td><details> <summary>TestFile3 ❌</summary>  </details></td>
+      <td></td>
+      <td>5s</td>
     </tr>
     </table>`, true)
-    .addRaw('<details> <summary>Click me</summary> </details>', true)
+    // .addRaw('<details> <summary>Click me</summary> </details>', true)
     .write()
 
     // Cleanup post run for self hosted runners
