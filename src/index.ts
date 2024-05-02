@@ -85,7 +85,7 @@ async function run() {
       <td><details> <summary>TestFile 1 ✅</summary>
         <p>
         Test 1_1 ✅</br>
-        Test 1_2 ✅</br>
+        Test 1_2 ✅
         </p>
       </details></td>
       <td></td>
