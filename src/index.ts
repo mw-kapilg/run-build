@@ -109,7 +109,10 @@ async function run() {
     </tr>
     </table>
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
-    <kbd><br>Title<br></kbd>[Link]`, true)
+    <kbd><br>Title<br></kbd>[Link]
+    <a>Click here</a> to debug using MATLAB Online
+    <a>Click here</a> to view detailed test results
+    <a>Click here</a> to share results via Design Cloud`, true)
     .write()
 
     // Cleanup post run for self hosted runners
