@@ -75,9 +75,7 @@ async function run() {
 
     await core.summary
     .addHeading('MATLAB Test Results')
-    .addRaw(`<button type="button" onclick="alert('Hello world!')">Click Me!</button>
-    <kbd><br>Title<br></kbd>[Link]
-    <table>
+    .addRaw(`<table>
     <tr>
       <th>Test Name</th>
       <th>Diagnostics</th>
@@ -109,8 +107,9 @@ async function run() {
       </td>
       <td valign="top">5.00s</td>
     </tr>
-    </table>`, true)
-    // .addRaw('<details> <summary>Click me</summary> </details>', true)
+    </table>
+    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+    <kbd><br>Title<br></kbd>[Link]`, true)
     .write()
 
     // Cleanup post run for self hosted runners
