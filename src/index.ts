@@ -77,6 +77,22 @@ async function run() {
     .addHeading('MATLAB Test Results')
     .addRaw(`<table>
     <tr>
+        <th>Total tests</th>
+        <th>Passed ✅</th>
+        <th>Failed ❌</th>
+        <th>Incomplete ⚠️</th>
+        <th>Not Run 🚫</th>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>5</td>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    </table>
+    <table>
+    <tr>
       <th>Test Name</th>
       <th>Diagnostics</th>
       <th>Duration</th>
