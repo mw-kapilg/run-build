@@ -83,7 +83,7 @@ async function run() {
         <th>Incomplete ⚠️</th>
         <th>Not Run 🚫</th>
     </tr>
-    <tr>
+    <tr align="center">
         <td>6</td>
         <td>5</td>
         <td>1</td>
@@ -115,7 +115,7 @@ async function run() {
     </tr>
     <tr>
       <td><details> <summary>TestFile 3 ❌</summary>
-        <p>
+        <p align="right">
         Test 3_1 ✅</br>
         Test 3_2 ❌</br>
         Test 3_3 ✅
