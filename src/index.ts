@@ -108,12 +108,12 @@ async function run() {
       <td valign="top">5.00s</td>
     </tr>
     </table>
-    </br>
     <a href="">Click here</a> to debug using MATLAB Online
-    </rb>
+    </br>
     <a href="">Click here</a> to view detailed test results
     </br>
     <a href="">Click here</a> to share results via Design Cloud
+    </br>
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
     <kbd><br>Title<br></kbd>[Link]`, true)
     .write()
