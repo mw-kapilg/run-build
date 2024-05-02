@@ -76,7 +76,7 @@ async function run() {
     await core.summary
     .addHeading('MATLAB Test Results')
     .addRaw(`<table>
-    <tr>
+    <tr align="center">
         <th>Total tests</th>
         <th>Passed ✅</th>
         <th>Failed ❌</th>
@@ -106,12 +106,12 @@ async function run() {
         </p>
       </details></td>
       <td></td>
-      <td valign="top">0.01s</td>
+      <td valign="top" align="center">0.01s</td>
     </tr>
     <tr>
       <td><details> <summary>TestFile 2 ✅</summary></details></td>
       <td></td>
-      <td>0.02s</td>
+      <td valign="top" align="center">0.02s</td>
     </tr>
     <tr>
       <td><details> <summary>TestFile 3 ❌</summary>
@@ -127,7 +127,7 @@ async function run() {
         </br>
       </p>
       </td>
-      <td valign="top">5.00s</td>
+      <td valign="top" align="center">5.00s</td>
     </tr>
     </table>
     <a href="">Click here</a> to debug using MATLAB Online
