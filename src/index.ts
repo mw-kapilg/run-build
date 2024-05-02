@@ -110,8 +110,11 @@ async function run() {
     </table>
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
     <kbd><br>Title<br></kbd>[Link]
+    <\br>
     <a href="">Click here</a> to debug using MATLAB Online
+    <\br>
     <a href="">Click here</a> to view detailed test results
+    <\br>
     <a href="">Click here</a> to share results via Design Cloud`, true)
     .write()
 
