@@ -90,8 +90,9 @@ async function run() {
         <td>0</td>
         <td>0</td>
     </tr>
-    </table>
-    <table>
+    </table>`, true)
+    .addHeading('All tests')
+    .addRaw(`<table>
     <tr>
       <th>Test Name</th>
       <th>Diagnostics</th>
