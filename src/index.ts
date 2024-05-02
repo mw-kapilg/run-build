@@ -97,7 +97,7 @@ async function run() {
     </tr>
     <tr>
       <td><details> <summary>TestFile 3 ❌</summary>
-        <p style="text-indent: 25px;">
+        <p>
         Test 3_1 ✅</br>
         Test 3_2 ❌</br>
         Test 3_3 ✅</br>
@@ -105,7 +105,6 @@ async function run() {
       </details></td>
       <td>
       <p>
-        </br>
         <details> <summary>Stack trace</summary></br>
         </br>
       </p>
