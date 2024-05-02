@@ -116,9 +116,9 @@ async function run() {
     <tr>
       <td><details> <summary>TestFile 3 ❌</summary>
         <p align="right">
-        Test 3_1 ✅</br>
-        Test 3_2 ❌</br>
-        Test 3_3 ✅
+        </br>Test 3_1 ✅
+        </br>Test 3_2 ❌
+        </br>Test 3_3 ✅
         </p>
       </details></td>
       <td>
