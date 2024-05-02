@@ -75,7 +75,7 @@ async function run() {
 
     await core.summary
     .addHeading('MATLAB Test Results')
-    .addRaw(`<button type="button">Click Me!</button>
+    .addRaw(`<button type="button" onclick="alert('Hello world!')">Click Me!</button>
     <kbd><br>Title<br></kbd>[Link]
     <table>
     <tr>
@@ -107,7 +107,7 @@ async function run() {
         </br>
       </p>
       </td>
-      <td>5.00s</td>
+      <td valign="top">5.00s</td>
     </tr>
     </table>`, true)
     // .addRaw('<details> <summary>Click me</summary> </details>', true)
