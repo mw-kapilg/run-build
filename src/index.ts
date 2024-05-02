@@ -73,7 +73,7 @@ async function run() {
     // // .addLink('View detailed test result', 'https://github.com')
     // .write()
 
-    await core.Summary
+    await core.summary
     .addHeading('MATLAB Test Results')
     .addRaw(`
     <button type="button">Click Me!</button>
