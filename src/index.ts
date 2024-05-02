@@ -102,18 +102,6 @@ async function run() {
         <li>Test 3_2 ❌</li>
         <li>Test 3_3 ✅</li>
         </ul>
-        <table>
-            <tr>
-            <th>Test Name</th>
-            <th>Diagnostics</th>
-            <th>Duration</th>
-            </tr>
-            <tr>
-            <td>TestFile 1 ✅</td>
-            <td></td>
-            <td>0.01s</td>
-            </tr>
-        </table>
       </details></td>
       <td></td>
       <td>5.00s</td>
