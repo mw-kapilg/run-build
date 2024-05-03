@@ -140,9 +140,23 @@ async function run() {
     .addRaw(`<table>
     <tr>
         <td>Function</td>
-        <td><progress value="32" max="100"> 32% </progress></td>
-        <td>![50%](https://progress-bar.dev/50)</td>
-        <td align="center"><img src="https://progress-bar.dev/50"></td>
+        <td valign="top" align="center"><img src="https://progress-bar.dev/100"></td>
+    </tr>
+    <tr>
+        <td>Statement</td>
+        <td valign="top" align="center"><img src="https://progress-bar.dev/88"></td>
+    </tr>
+    <tr>
+        <td>Decision</td>
+        <td valign="top" align="center"><img src="https://progress-bar.dev/80"></td>
+    </tr>
+    <tr>
+        <td>Condition</td>
+        <td valign="top" align="center"><img src="https://progress-bar.dev/76"></td>
+    </tr>
+    <tr>
+        <td>MC/DC</td>
+        <td valign="top" align="center"><img src="https://progress-bar.dev/53"></td>
     </tr>
     </table>`, true)
     .write()
