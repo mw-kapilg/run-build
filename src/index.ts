@@ -123,7 +123,7 @@ async function run() {
       </details></td>
       <td>
       <p>
-        <details> <summary>Stack trace</summary></br>
+        <details><summary>Stack trace</summary></br>
         </br>
       </p>
       </td>
@@ -139,6 +139,13 @@ async function run() {
     </br>
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
     <kbd><br>Title<br></kbd>[Link]`, true)
+    .addHeading('MATLAB Code Coverage')
+    .addRaw(`<table>
+    <tr>
+        <td>Function</td>
+        <td><progress id="file" value="32" max="100"> 32% </progress></td>
+    </tr>
+    </table>`, true)
     .write()
 
     // Cleanup post run for self hosted runners
