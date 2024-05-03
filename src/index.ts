@@ -139,20 +139,20 @@ async function run() {
     .addHeading('MATLAB Code Coverage')
     .addRaw(`<table>
     <tr>
-        <td>Function</td>
-        <td valign="top" align="center"><img src="https://progress-bar.dev/100"></td>
+        <td valign="top">Function</td>
+        <td align="center"><img src="https://progress-bar.dev/100"></td>
     </tr>
     <tr>
-        <td>Statement</td>
-        <td valign="middle" align="center"><img src="https://progress-bar.dev/88"></td>
+        <td valign="middle">Statement</td>
+        <td align="center"><img src="https://progress-bar.dev/88"></td>
     </tr>
     <tr>
-        <td>Decision</td>
-        <td valign="bottom" align="center"><img src="https://progress-bar.dev/80"></td>
+        <td valign="bottom">Decision</td>
+        <td align="center"><img src="https://progress-bar.dev/80"></td>
     </tr>
     <tr>
-        <td>Condition</td>
-        <td valign="baseline" align="center"><img src="https://progress-bar.dev/66"></td>
+        <td valign="baseline">Condition</td>
+        <td align="center"><img src="https://progress-bar.dev/66"></td>
     </tr>
     <tr>
         <td>MC/DC</td>
