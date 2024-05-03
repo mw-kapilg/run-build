@@ -135,16 +135,14 @@ async function run() {
     <a href="">Click here</a> to view detailed test results
     </br>
     <a href="">Click here</a> to share results via Design Cloud
-    </br>
-    </br>
-    <button type="button" onclick="alert('Hello world!')">Click Me!</button>
-    <kbd><br>Title<br></kbd>[Link]`, true)
+    </br>`, true)
     .addHeading('MATLAB Code Coverage')
     .addRaw(`<table>
     <tr>
         <td>Function</td>
         <td><progress value="32" max="100"> 32% </progress></td>
         <td>![50%](https://progress-bar.dev/50)</td>
+        <td align="center"><img src="https://progress-bar.dev/50"></td>
     </tr>
     </table>`, true)
     .write()
