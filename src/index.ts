@@ -140,7 +140,7 @@ async function run() {
     .addRaw(`<table>
     <tr>
         <td>Function</td>
-        <td valign="top" align="center"><img src="https://progress-bar.dev/100"></td>
+        <td valign="middle" align="center"><img src="https://progress-bar.dev/100"></td>
     </tr>
     <tr>
         <td>Statement</td>
@@ -152,13 +152,19 @@ async function run() {
     </tr>
     <tr>
         <td>Condition</td>
-        <td valign="top" align="center"><img src="https://progress-bar.dev/76"></td>
+        <td valign="top" align="center"><img src="https://progress-bar.dev/66"></td>
     </tr>
     <tr>
         <td>MC/DC</td>
         <td valign="top" align="center"><img src="https://progress-bar.dev/53"></td>
     </tr>
-    </table>`, true)
+    </table>
+    <a href="">Click here</a> to debug using MATLAB Online
+    </br>
+    <a href="">Click here</a> to view detailed code coverage results
+    </br>
+    <a href="">Click here</a> to share results via Design Cloud
+    </br>`, true)
     .write()
 
     // Cleanup post run for self hosted runners
