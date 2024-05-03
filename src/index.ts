@@ -143,7 +143,8 @@ async function run() {
     .addRaw(`<table>
     <tr>
         <td>Function</td>
-        <td><progress id="file" value="32" max="100"> 32% </progress></td>
+        <td><progress value="32" max="100"> 32% </progress></td>
+        <td>![50%](https://progress-bar.dev/50)</td>
     </tr>
     </table>`, true)
     .write()
