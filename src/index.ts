@@ -74,6 +74,33 @@ async function run() {
     // .write()
 
     await core.summary
+    .addHeading('MATLAB Code Coverage')
+    .addRaw(`<table>
+    <tr>
+        <td valign="top">Function</td>
+        <td align="center"><img src="https://progress-bar.xyz/100"></td>
+    </tr>
+    <tr>
+        <td valign="middle">Statement</td>
+        <td align="center"><img src="https://progress-bar.xyz/88"></td>
+    </tr>
+    <tr>
+        <td valign="bottom">Decision</td>
+        <td align="center"><img src="https://progress-bar.xyz/80"></td>
+    </tr>
+    <tr>
+        <td valign="baseline">Condition</td>
+        <td align="center"><img src="https://progress-bar.xyz/66"></td>
+    </tr>
+    <tr>
+        <td>MC/DC</td>
+        <td valign="top" align="center"><img src="https://progress-bar.xyz/53"></td>
+    </tr>
+    </table>
+    <a href="">Click here</a> to view detailed code coverage results
+    </br>
+    <a href="">Click here</a> to share results via Design Centre
+    </br>`, true)
     .addHeading('MATLAB Test Results')
     .addRaw(`<table>
     <tr align="center">
@@ -133,35 +160,6 @@ async function run() {
     <a href="">Click here</a> to debug using MATLAB Online
     </br>
     <a href="">Click here</a> to view detailed test results
-    </br>
-    <a href="">Click here</a> to share results via Design Centre
-    </br>`, true)
-    .addHeading('MATLAB Code Coverage')
-    .addRaw(`<table>
-    <tr>
-        <td valign="top">Function</td>
-        <td align="center"><img src="https://progress-bar.xyz/100"></td>
-    </tr>
-    <tr>
-        <td valign="middle">Statement</td>
-        <td align="center"><img src="https://progress-bar.xyz/88"></td>
-    </tr>
-    <tr>
-        <td valign="bottom">Decision</td>
-        <td align="center"><img src="https://progress-bar.xyz/80"></td>
-    </tr>
-    <tr>
-        <td valign="baseline">Condition</td>
-        <td align="center"><img src="https://progress-bar.xyz/66"></td>
-    </tr>
-    <tr>
-        <td>MC/DC</td>
-        <td valign="top" align="center"><img src="https://progress-bar.xyz/53"></td>
-    </tr>
-    </table>
-    // <a href="">Click here</a> to debug using MATLAB Online
-    // </br>
-    <a href="">Click here</a> to view detailed code coverage results
     </br>
     <a href="">Click here</a> to share results via Design Centre
     </br>`, true)
