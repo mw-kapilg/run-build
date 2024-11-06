@@ -134,36 +134,36 @@ async function run() {
     </br>
     <a href="">Click here</a> to view detailed test results
     </br>
-    <a href="">Click here</a> to share results via Design Cloud
+    <a href="">Click here</a> to share results via Design Centre
     </br>`, true)
     .addHeading('MATLAB Code Coverage')
     .addRaw(`<table>
     <tr>
         <td valign="top">Function</td>
-        <td align="center"><img src="https://progress-bar.dev/100"></td>
+        <td align="center"><img src="https://progress-bar.xyz/100"></td>
     </tr>
     <tr>
         <td valign="middle">Statement</td>
-        <td align="center"><img src="https://progress-bar.dev/88"></td>
+        <td align="center"><img src="https://progress-bar.xyz/88"></td>
     </tr>
     <tr>
         <td valign="bottom">Decision</td>
-        <td align="center"><img src="https://progress-bar.dev/80"></td>
+        <td align="center"><img src="https://progress-bar.xyz/80"></td>
     </tr>
     <tr>
         <td valign="baseline">Condition</td>
-        <td align="center"><img src="https://progress-bar.dev/66"></td>
+        <td align="center"><img src="https://progress-bar.xyz/66"></td>
     </tr>
     <tr>
         <td>MC/DC</td>
-        <td valign="top" align="center"><img src="https://progress-bar.dev/53"></td>
+        <td valign="top" align="center"><img src="https://progress-bar.xyz/53"></td>
     </tr>
     </table>
-    <a href="">Click here</a> to debug using MATLAB Online
-    </br>
+    // <a href="">Click here</a> to debug using MATLAB Online
+    // </br>
     <a href="">Click here</a> to view detailed code coverage results
     </br>
-    <a href="">Click here</a> to share results via Design Cloud
+    <a href="">Click here</a> to share results via Design Centre
     </br>`, true)
     .write()
 
