@@ -75,7 +75,8 @@ async function run() {
     // // .addLink('View detailed test result', 'https://github.com')
     // .write()
 
-    const myHeader = `<table>
+    const myTestTitle = 'MATLAB Test Results';
+    const myTestHeader = `<table>
     <tr align="center">
         <th>Total tests</th>
         <th>Passed ✅</th>
@@ -91,7 +92,7 @@ async function run() {
         <td>0</td>
     </tr>
     </table>`;
-    const myTestTitle = 'MATLAB Test Results';
+    const myTestSubtitle = 'All tests';
     const myTestSummary = `<table>
     <tr>
       <th>Test Name</th>
@@ -161,8 +162,8 @@ async function run() {
     
     await core.summary
     .addHeading(myTestTitle)
-    .addRaw(myHeader, true)
-    .addHeading('All tests', 2)
+    .addRaw(myTestHeader, true)
+    .addHeading(myTestSubtitle, 2)
     .addRaw(myTestSummary, true)
     .addHeading('MATLAB Code Coverage')
     .addRaw(myCoverageSummary, true)
@@ -186,7 +187,9 @@ async function run() {
       // conclusion: "success",
       output: {
         title: myTestTitle,
-        summary: myHeader + myTestSummary
+        summary: myTestHeader
+        + '##' + myTestSubtitle
+        + myTestSummary
         // ,annotations 
       }
     };
