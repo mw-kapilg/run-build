@@ -58,8 +58,16 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create annotation for build error
+      - name: Create annotation for grouping
         run: |
+          echo "::group::Running tinstall"
+          echo "...."
+          echo "Done tinstall"
+          echo "::endgroup::"
+          echo "::group::Running ParameterizedTestExample"
+          echo "...."
+          echo "Done ParameterizedTestExample"
+          echo "::endgroup::"
           echo "::group::Running TestExamples"
           echo "...."
           echo "Done TestExamples"
