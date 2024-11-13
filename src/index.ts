@@ -188,7 +188,7 @@ async function run() {
       output: {
         title: myTestTitle,
         summary: myTestHeader
-        + '##' + myTestSubtitle
+        + '## ' + myTestSubtitle
         + myTestSummary
         // ,annotations 
       }
