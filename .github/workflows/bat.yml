@@ -60,7 +60,7 @@ jobs:
 
       - name: Create annotation for error
         run: |
-          echo "::error file=src/buildtool.unit.test.ts,title=MATLAB:UndefinedFunction::Undefined function 'optimvar' for input arguments of type 'char'."
+          echo "::error file=.github/workflows/bat.yml,title=MATLAB:UndefinedFunction::Undefined function 'optimvar' for input arguments of type 'char'."
 
       - name: Create annotation for grouping
         run: |
