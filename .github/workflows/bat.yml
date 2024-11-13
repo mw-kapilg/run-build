@@ -58,6 +58,13 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create annotation for build error
+        run: |
+          echo "::group::Running TestExamples"
+          echo "...."
+          echo "Done TestExamples"
+          echo "::endgroup::"
+
       # - name: Verify correct tasks appear in buildlog.txt
       #   run: |
       #     set -e
