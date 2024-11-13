@@ -21,6 +21,8 @@
     "dependencies": {
         "@actions/core": "^1.4.0",
         "@actions/exec": "^1.1.0",
+        "@actions/github": "^6.0.0",
+        "run-matlab-build-action": "file:",
         "run-matlab-command-action": "github:matlab-actions/run-command#v2.1.0"
     },
     "devDependencies": {

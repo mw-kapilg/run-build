@@ -2,6 +2,7 @@
 
 import * as core from "@actions/core";
 import * as exec from "@actions/exec";
+import * as github from '@actions/github';
 import * as io from "@actions/io";
 //import { matlab } from "run-matlab-command-action";
 import * as buildtool from "./buildtool";
@@ -21,6 +22,7 @@ async function run() {
     const options: buildtool.RunBuildOptions = {
         Tasks: core.getInput("tasks"),
         BuildOptions: core.getInput("build-options"),
+        GithubToken: core.getInput("github-token"),
     };
 
 //     const command = buildtool.generateCommand(options);
@@ -73,9 +75,7 @@ async function run() {
     // // .addLink('View detailed test result', 'https://github.com')
     // .write()
 
-    await core.summary
-    .addHeading('MATLAB Test Results')
-    .addRaw(`<table>
+    const myHeader = `<table>
     <tr align="center">
         <th>Total tests</th>
         <th>Passed ✅</th>
@@ -90,9 +90,8 @@ async function run() {
         <td>0</td>
         <td>0</td>
     </tr>
-    </table>`, true)
-    .addHeading('All tests', 2)
-    .addRaw(`<table>
+    </table>`;
+    const myTestSummary = `<table>
     <tr>
       <th>Test Name</th>
       <th>Diagnostics</th>
@@ -129,9 +128,8 @@ async function run() {
       </td>
       <td valign="top" align="center">5.00s</td>
     </tr>
-    </table>`, true)
-    .addHeading('MATLAB Code Coverage')
-    .addRaw(`<table>
+    </table>`;
+    const myCoverageSummary = `<table>
     <tr>
         <td valign="top">Function</td>
         <td align="center"><img src="https://progress-bar.xyz/100"></td>
@@ -158,8 +156,47 @@ async function run() {
     <a href="">Click here</a> to manage project on Design Center
     </br>
     <a href="">Click here</a> to view & share results via Quality Center
-    </br>`, true)
+    </br>`;
+    
+    await core.summary
+    .addHeading('MATLAB Test Results')
+    .addRaw(myHeader, true)
+    .addHeading('All tests', 2)
+    .addRaw(myTestSummary, true)
+    .addHeading('MATLAB Code Coverage')
+    .addRaw(myCoverageSummary, true)
     .write()
+
+    // createCheckWithAnnotations
+    // const octokit = new github.GitHub(github.token);
+    const octokit = github.getOctokit(options.GithubToken || '');
+
+    const retrieveHeadSHA = () => {
+      if (github.context.payload.pull_request) {
+        return github.context.payload.pull_request.head.sha;
+      }
+      return github.context.sha;
+    }
+
+    const checkRequest = {
+      ...github.context.repo,
+      head_sha: retrieveHeadSHA(),
+      name: "MyCheckName",
+      // conclusion: "success",
+      output: {
+        title: 'My Test Results',
+        summary: 'My Summary'
+        // ,annotations 
+      }
+    };
+  
+    try {
+      await octokit.rest.checks.create(checkRequest);
+    } catch (error) {
+      throw new Error(`Request to create annotations failed - request: ${ JSON.stringify(checkRequest) }`);
+      // - error: ${ error.message } 
+    }
+    
 
     // Cleanup post run for self hosted runners
     // await io.rmRF(workspaceDir + '/.matlab');

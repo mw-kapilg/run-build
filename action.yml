@@ -19,6 +19,11 @@ inputs:
       Startup options for MATLAB
     required: false
     default: ""
+  github-token:
+    description: >-
+      GITHUB_TOKEN
+    required: false
+    default: ""
 runs:
   using: node20
   main: dist/index.js

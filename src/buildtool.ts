@@ -3,6 +3,7 @@
 export interface RunBuildOptions {
     Tasks?: string;
     BuildOptions?: string;
+    GithubToken?: string;
 }
 
 export function generateCommand(options: RunBuildOptions): string {
