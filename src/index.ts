@@ -185,7 +185,7 @@ async function run() {
       // conclusion: "success",
       output: {
         title: 'My Test Results',
-        summary: 'My Summary'
+        summary: myTestSummary
         // ,annotations 
       }
     };
