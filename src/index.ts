@@ -91,6 +91,7 @@ async function run() {
         <td>0</td>
     </tr>
     </table>`;
+    const myTestTitle = 'MATLAB Test Results';
     const myTestSummary = `<table>
     <tr>
       <th>Test Name</th>
@@ -159,7 +160,7 @@ async function run() {
     </br>`;
     
     await core.summary
-    .addHeading('MATLAB Test Results')
+    .addHeading(myTestTitle)
     .addRaw(myHeader, true)
     .addHeading('All tests', 2)
     .addRaw(myTestSummary, true)
@@ -181,11 +182,11 @@ async function run() {
     const checkRequest = {
       ...github.context.repo,
       head_sha: retrieveHeadSHA(),
-      name: "MyCheckName",
+      name: "MATLAB Job Summary",
       // conclusion: "success",
       output: {
-        title: 'My Test Results',
-        summary: myTestSummary
+        title: myTestTitle,
+        summary: myHeader + myTestSummary
         // ,annotations 
       }
     };
