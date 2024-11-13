@@ -58,6 +58,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create annotation for error
+        run: |
+          echo "::error file=fileName,line=1,endLine=3,title=myTitle::myMessage"
+
       - name: Create annotation for grouping
         run: |
           echo "::group::tinstall"
