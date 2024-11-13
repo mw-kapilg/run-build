@@ -60,7 +60,7 @@ jobs:
 
       - name: Create annotation for error
         run: |
-          echo "::error line=1,title=MATLAB:UndefinedFunction::Undefined function 'optimvar' for input arguments of type 'char'."
+          echo "::error title=MATLAB:UndefinedFunction::Undefined function 'optimvar' for input arguments of type 'char'."
 
       - name: Create annotation for grouping
         run: |
