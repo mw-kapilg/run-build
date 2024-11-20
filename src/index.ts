@@ -179,6 +179,14 @@ async function run() {
       <td valign="top" align="center">0.01</td>
     </tr>
     </table>`;
+    const myStackTrace = `❌ TestFile3/Test1 failed<br>
+    <p>
+        <details><summary>View stack trace</summary></br>
+        <pre>
+        Verification failed in TestExamples/testNonLeapYear.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    verifyEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n                                                        \n              1          2         -1          -0.5     \n    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36
+        </pre>
+    </p>
+    `;
     const myCoverageSummary = `<table>
     <tr>
         <td valign="top">Function</td>
@@ -222,6 +230,7 @@ async function run() {
     .addRaw(myTestSummary, true)
     // .addHeading('MATLAB Code Coverage')
     // .addRaw(myCoverageSummary, true)
+    .addRaw(myStackTrace)
     .addRaw(myFooter)
     .write()
 
@@ -246,6 +255,7 @@ async function run() {
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
         + myTestSummary
+        + myStackTrace
         + myFooter
         // ,annotations 
       }
