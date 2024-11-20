@@ -102,14 +102,14 @@ async function run() {
     </tr>
     <tr>
       <td><b>✅ TestFile1</b>
-      <td><b>0.01</b></td>
+      <td align="center"><b>0.01</b></td>
     </tr>
     <tr>
-      <td><b>✅ TestFile1</b>.Test1</td>
+      <td>✅ TestFile1.Test1</td>
       <td align="center">0.005</td>
     </tr>
     <tr>
-      <td><b>✅ TestFile1</b>.Test2</td>
+      <td>✅ TestFile1.Test2</td>
       <td align="center">0.005</td>
     </tr>
     <tr>
@@ -129,11 +129,11 @@ async function run() {
       <td align="center"><b>5.00</b></td>
     </tr>
     <tr>
-      <td><b>❌ TestFile3</b>.Test1</td>
+      <td>❌ TestFile3.Test1</td>
       <td valign="top" align="center">4.99</td>
     </tr>
     <tr>
-      <td><b>✅ TestFile3</b>.Test2</td>
+      <td>✅ TestFile3.Test2</td>
       <td valign="top" align="center">0.01</td>
     </tr>
     </table>`;
