@@ -162,9 +162,9 @@ async function run() {
     const myFooter = 
     `<a href="">Click here</a> to debug using MATLAB Online
     </br>
-    <a href="">Click here</a> to manage project on Design Center
+    (future) <a href="">Click here</a> to manage project on Design Center
     </br>
-    <a href="">Click here</a> to view & share results via Quality Center
+    (future) <a href="">Click here</a> to view & share results via Quality Center
     </br>`;
 
     // <!-- <td>
