@@ -158,8 +158,9 @@ async function run() {
         <td>MC/DC</td>
         <td valign="top" align="center"><img src="https://progress-bar.xyz/53"></td>
     </tr>
-    </table>
-    <a href="">Click here</a> to debug using MATLAB Online
+    </table>`;
+    const myFooter = 
+    `<a href="">Click here</a> to debug using MATLAB Online
     </br>
     <a href="">Click here</a> to manage project on Design Center
     </br>
@@ -178,8 +179,9 @@ async function run() {
     .addRaw(myTestHeader, true)
     .addHeading(myTestSubtitle, 2)
     .addRaw(myTestSummary, true)
-    .addHeading('MATLAB Code Coverage')
-    .addRaw(myCoverageSummary, true)
+    // .addHeading('MATLAB Code Coverage')
+    // .addRaw(myCoverageSummary, true)
+    .addRaw(myFooter)
     .write()
 
     // createCheckWithAnnotations
