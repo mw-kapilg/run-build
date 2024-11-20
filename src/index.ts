@@ -100,40 +100,40 @@ async function run() {
       <th>Test</th>
       <th>Duration(s)</th>
     </tr>
-    <tr>
+    <!-- <tr>
       <td><b>✅ TestFile1</b>
       <td align="center"><b>0.01</b></td>
-    </tr>
+    </tr> -->
     <tr>
-      <td>✅ TestFile1.Test1</td>
+      <td><b>✅ TestFile1</b>.Test1</td>
       <td align="center">0.005</td>
     </tr>
     <tr>
-      <td>✅ TestFile1.Test2</td>
+      <td><b>✅ TestFile1</b>.Test2</td>
       <td align="center">0.005</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td><b>✅ TestFile2</b>
       <td align="center"><b>0.02</b></td>
-    </tr>
+    </tr> -->
     <tr>
-      <td>✅ TestFile2.Test1</td>
+      <td><b>✅ TestFile2</b>.Test1</td>
       <td align="center">0.01</td>
     </tr>
     <tr>
-      <td>✅ TestFile2.Test2</td>
+      <td><b>✅ TestFile2</b>.Test2</td>
       <td align="center">0.01</td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td><b>❌ TestFile3</b>
       <td align="center"><b>5.00</b></td>
-    </tr>
+    </tr> -->
     <tr>
-      <td>❌ TestFile3.Test1</td>
+      <td><b>❌ TestFile3</b>.Test1</td>
       <td valign="top" align="center">4.99</td>
     </tr>
     <tr>
-      <td>✅ TestFile3.Test2</td>
+      <td><b>✅ TestFile3</b>.Test2</td>
       <td valign="top" align="center">0.01</td>
     </tr>
     </table>`;
@@ -159,8 +159,7 @@ async function run() {
         <td valign="top" align="center"><img src="https://progress-bar.xyz/53"></td>
     </tr>
     </table>`;
-    const myFooter = 
-    `<a href="">Click here</a> to debug using MATLAB Online
+    const myFooter = `<a href="">Click here</a> to debug using MATLAB Online
     </br>
     (future) <a href="">Click here</a> to manage project on Design Center
     </br>
