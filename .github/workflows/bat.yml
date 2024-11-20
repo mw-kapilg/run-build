@@ -60,11 +60,11 @@ jobs:
 
       - name: Create annotation for error
         run: |
-          echo "::error file=TestFile3/Test1,line=36,title=AssumptionFailed::An assumption was not met in TestExamples/testNonLeapYear and it filtered the remainder of the test."
+          echo "::error file=TestFile3/Test1,line=36,title=VerificationFailed::Verification failed in TestFile3/Test1"
 
       - name: Create annotation for warning
         run: |
-          echo "::warning file=TestFile3/Test1,line=12,title=MATLAB:singularMatrix::Input must be a character vector"
+          echo "::warning file=TestFile3/Test1,line=12,title=MATLAB:singularMatrix::Matrix is singular to working precision"
 
       - name: Create annotation for grouping
         run: |
