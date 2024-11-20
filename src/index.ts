@@ -219,7 +219,7 @@ async function run() {
     .addHeading(myTestTitle)
     .addRaw(myTestHeader, true)
     .addHeading(myTestSubtitle, 2)
-    .addRaw(myTestSummary2, true)
+    .addRaw(myTestSummary, true)
     // .addHeading('MATLAB Code Coverage')
     // .addRaw(myCoverageSummary, true)
     .addRaw(myFooter)
@@ -245,7 +245,7 @@ async function run() {
         title: myTestTitle,
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
-        + myTestSummary2
+        + myTestSummary
         + myFooter
         // ,annotations 
       }
