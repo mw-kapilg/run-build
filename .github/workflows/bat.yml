@@ -64,7 +64,7 @@ jobs:
 
       - name: Create annotation for warning
         run: |
-          echo "::warning file=TestFile3/Test1,line=12,title=Input must be a character vector"
+          echo "::warning file=TestFile3/Test1,line=12,title=Input must be a character vector::"
 
       - name: Create annotation for grouping
         run: |
