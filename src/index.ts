@@ -106,25 +106,35 @@ async function run() {
     </tr>
     <tr>
       <td><b>✅ TestFile1</b>.Test1</td>
-      <td valign="top" align="center">0.01</td>
+      <td valign="top" align="center">0.005</td>
     </tr>
     <tr>
-      <td>✅ TestFile1.Test1</td>
-      <td valign="top" align="center">0.01</td>
+      <td><b>✅ TestFile1</b>.Test2</td>
+      <td valign="top" align="center">0.005</td>
     </tr>
     <tr>
-      <td><details> <summary>TestFile 2 ✅</summary></details></td>
+      <td><b>✅ TestFile2</b>
       <td valign="top" align="center">0.02</td>
     </tr>
     <tr>
-      <td><details> <summary>TestFile 3 ❌</summary>
-        <p align="right">
-        </br>Test 3_1 ✅
-        </br>Test 3_2 ❌
-        </br>Test 3_3 ✅
-        </p>
-      </details></td>
+      <td>✅ TestFile2.Test1</td>
+      <td valign="top" align="center">0.01</td>
+    </tr>
+    <tr>
+      <td>✅ TestFile2.Test2</td>
+      <td valign="top" align="center">0.01</td>
+    </tr>
+    <tr>
+      <td><b>✅ TestFile3</b>
       <td valign="top" align="center">5.00</td>
+    </tr>
+    <tr>
+      <td><b>❌ TestFile3</b>.Test1</td>
+      <td valign="top" align="center">4.99</td>
+    </tr>
+    <tr>
+      <td><b>✅ TestFile3</b>.Test2</td>
+      <td valign="top" align="center">0.01</td>
     </tr>
     </table>`;
     const myCoverageSummary = `<table>
