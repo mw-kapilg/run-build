@@ -101,8 +101,10 @@ async function run() {
       <th>Duration(s)</th>
     </tr>
     <tr>
-      <td><b>✅ TestFile1</b>
+      <b>
+      <td>✅ TestFile1
       <td valign="top" align="center">0.01</td>
+      </b>
     </tr>
     <tr>
       <td><b>✅ TestFile1</b>.Test1</td>
@@ -113,8 +115,10 @@ async function run() {
       <td valign="top" align="center">0.005</td>
     </tr>
     <tr>
-      <td><b>✅ TestFile2</b>
+      <b>
+      <td>✅ TestFile2
       <td valign="top" align="center">0.02</td>
+      </b>
     </tr>
     <tr>
       <td>✅ TestFile2.Test1</td>
@@ -125,8 +129,10 @@ async function run() {
       <td valign="top" align="center">0.01</td>
     </tr>
     <tr>
-      <td><b>✅ TestFile3</b>
+      <b>
+      <td>❌ TestFile3
       <td valign="top" align="center">5.00</td>
+      </b>
     </tr>
     <tr>
       <td><b>❌ TestFile3</b>.Test1</td>
