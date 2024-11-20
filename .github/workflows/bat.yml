@@ -60,7 +60,7 @@ jobs:
 
       - name: Create annotation for error
         run: |
-          echo "::error title=MATLAB:UndefinedFunction::Undefined function 'optimvar' for input arguments of type 'char'."
+          echo "::error title=MATLAB:UndefinedFunction::<pre>An assumption was not met in TestExamples/testNonLeapYear and it filtered the remainder of the test.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    assumeEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n                                                        \n              1          2         -1          -0.5     \n    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36</pre>"
 
       - name: Create annotation for warning
         run: |
