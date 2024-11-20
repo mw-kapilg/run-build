@@ -101,12 +101,17 @@ async function run() {
       <th>Duration(s)</th>
     </tr>
     <tr>
-      <td><b>TestFile 1 ✅</b>
-        <!-- <p>
-        Test 1_1 ✅</br>
-        Test 1_2 ✅
-        </p> -->
+      <td><b>✅ TestFile 1</b>
+      <td valign="top" align="center">0.01</td>
+    </tr>
+    <tr>
+      <td><b>✅ TestFile 1</b>
+        .Test 1_1
         </td>
+      <td valign="top" align="center">0.01</td>
+    </tr>
+    <tr>
+      <td>✅ TestFile 1.Test 1_1</td>
       <td valign="top" align="center">0.01</td>
     </tr>
     <tr>
