@@ -97,16 +97,16 @@ async function run() {
     const myTestSubtitle = 'All tests';
     const myTestSummary = `<table>
     <tr>
-      <th>Test Name</th>
+      <th>Test</th>
       <th>Duration(s)</th>
     </tr>
     <tr>
-      <td><details> <summary>TestFile 1 ✅</summary>
-        <p>
+      <td><b>TestFile 1 ✅</b>
+        <!-- <p>
         Test 1_1 ✅</br>
         Test 1_2 ✅
-        </p>
-      </details></td>
+        </p> -->
+        </td>
       <td valign="top" align="center">0.01</td>
     </tr>
     <tr>
