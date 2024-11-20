@@ -58,21 +58,32 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Create annotation for error
+        run: |
+          echo "::error title=MATLAB:UndefinedFunction::Undefined function 'optimvar' for input arguments of type 'char'."
+
+      - name: Create annotation for warning
+        run: |
+          echo "::warning title=New Update Release available::MATLAB R2024a Update 3 is now available"
+
       - name: Create annotation for grouping
         run: |
-          echo "::group::Running tinstall"
+          echo "::group::tinstall"
+          echo "Running tinstall"
           echo "...."
           echo "Done tinstall"
           echo "__________"
           echo ""
           echo "::endgroup::"
-          echo "::group::Running ParameterizedTestExample"
+          echo "::group::ParameterizedTestExample"
+          echo "Running ParameterizedTestExample"
           echo "...."
           echo "Done ParameterizedTestExample"
           echo "__________"
           echo ""
           echo "::endgroup::"
-          echo "::group::Running TestExamples"
+          echo "::group::TestExamples"
+          echo "Running TestExamples"
           echo "...."
           echo "Done TestExamples"
           echo "__________"
