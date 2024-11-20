@@ -181,9 +181,7 @@ async function run() {
     </table>`;
     const myStackTrace = `<h3><b>❌ <u>TestFile3/Test1 failed</u></b></h3>
         <details><summary>View stack trace</summary></br>
-        <pre>
-        Verification failed in TestExamples/testNonLeapYear.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    verifyEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n                                                        \n              1          2         -1          -0.5     \n    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36
-        </pre>
+        <pre>Verification failed in TestExamples/testNonLeapYear.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    verifyEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n                                                        \n              1          2         -1          -0.5     \n    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36</pre>
         </details>
     `;
     const myCoverageSummary = `<table>
