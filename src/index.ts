@@ -231,7 +231,7 @@ async function run() {
     // .addHeading('MATLAB Code Coverage')
     // .addRaw(myCoverageSummary, true)
     .addRaw(myStackTrace)
-    .addRaw(myFooter)
+    // .addRaw(myFooter)
     .write()
 
     // createCheckWithAnnotations
