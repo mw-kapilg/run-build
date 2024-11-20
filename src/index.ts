@@ -240,7 +240,7 @@ async function run() {
       ...github.context.repo,
       head_sha: retrieveHeadSHA(),
       name: "MATLAB Job Summary",
-      // conclusion: "success",
+      conclusion: "failure",
       output: {
         title: myTestTitle,
         summary: myTestHeader
