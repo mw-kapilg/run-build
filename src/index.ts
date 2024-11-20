@@ -83,6 +83,7 @@ async function run() {
         <th>Failed ❌</th>
         <th>Incomplete ⚠️</th>
         <th>Not Run 🚫</th>
+        <th>Duration(s) ⌛</th>
     </tr>
     <tr align="center">
         <td>6</td>
@@ -90,14 +91,14 @@ async function run() {
         <td>1</td>
         <td>0</td>
         <td>0</td>
+        <td>5.03</td>
     </tr>
     </table>`;
     const myTestSubtitle = 'All tests';
     const myTestSummary = `<table>
     <tr>
       <th>Test Name</th>
-      <th>Diagnostics</th>
-      <th>Duration</th>
+      <th>Duration(s)</th>
     </tr>
     <tr>
       <td><details> <summary>TestFile 1 ✅</summary>
@@ -106,13 +107,11 @@ async function run() {
         Test 1_2 ✅
         </p>
       </details></td>
-      <td></td>
-      <td valign="top" align="center">0.01s</td>
+      <td valign="top" align="center">0.01</td>
     </tr>
     <tr>
       <td><details> <summary>TestFile 2 ✅</summary></details></td>
-      <td></td>
-      <td valign="top" align="center">0.02s</td>
+      <td valign="top" align="center">0.02</td>
     </tr>
     <tr>
       <td><details> <summary>TestFile 3 ❌</summary>
@@ -122,13 +121,7 @@ async function run() {
         </br>Test 3_3 ✅
         </p>
       </details></td>
-      <td>
-      <p>
-        <details><summary>Stack trace</summary></br>
-        </br>
-      </p>
-      </td>
-      <td valign="top" align="center">5.00s</td>
+      <td valign="top" align="center">5.00</td>
     </tr>
     </table>`;
     const myCoverageSummary = `<table>
@@ -159,6 +152,13 @@ async function run() {
     </br>
     <a href="">Click here</a> to view & share results via Quality Center
     </br>`;
+
+    // <!-- <td>
+    //   <p>
+    //     <details><summary>Stack trace</summary></br>
+    //     </br>
+    //   </p>
+    //   </td> -->
     
     await core.summary
     .addHeading(myTestTitle)
