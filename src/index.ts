@@ -101,38 +101,32 @@ async function run() {
       <th>Duration(s)</th>
     </tr>
     <tr>
-      <b>
-      <td>✅ TestFile1
-      <td valign="top" align="center">0.01</td>
-      </b>
+      <td><b>✅ TestFile1</b>
+      <td><b>0.01</b></td>
     </tr>
     <tr>
       <td><b>✅ TestFile1</b>.Test1</td>
-      <td valign="top" align="center">0.005</td>
+      <td align="center">0.005</td>
     </tr>
     <tr>
       <td><b>✅ TestFile1</b>.Test2</td>
-      <td valign="top" align="center">0.005</td>
+      <td align="center">0.005</td>
     </tr>
     <tr>
-      <b>
-      <td>✅ TestFile2
-      <td valign="top" align="center">0.02</td>
-      </b>
+      <td><b>✅ TestFile2</b>
+      <td align="center"><b>0.02</b></td>
     </tr>
     <tr>
       <td>✅ TestFile2.Test1</td>
-      <td valign="top" align="center">0.01</td>
+      <td align="center">0.01</td>
     </tr>
     <tr>
       <td>✅ TestFile2.Test2</td>
-      <td valign="top" align="center">0.01</td>
+      <td align="center">0.01</td>
     </tr>
     <tr>
-      <b>
-      <td>❌ TestFile3
-      <td valign="top" align="center">5.00</td>
-      </b>
+      <td><b>❌ TestFile3</b>
+      <td align="center"><b>5.00</b></td>
     </tr>
     <tr>
       <td><b>❌ TestFile3</b>.Test1</td>
