@@ -205,6 +205,7 @@ async function run() {
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
         + myTestSummary
+        + myFooter
         // ,annotations 
       }
     };
