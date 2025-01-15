@@ -263,9 +263,7 @@ async function run() {
     var id = null;
     try {
       const response = await octokit.rest.checks.create(checkRequest);
-      console.log("hello");
-      console.log(response.data);
-      console.log(response.data.id);
+      // console.log(response.data);
       id = response.data.id;
     } catch (error) {
       throw new Error(`Request to create annotations failed - request: ${ JSON.stringify(checkRequest) }`);
@@ -277,7 +275,26 @@ async function run() {
       check_run_id: id,
     });
 
-    console.log(get_response.data.output.summary);
+    const response_summary = get_response.data.output.summary;
+    console.log(get_response.data.output);
+    var new_summary = response_summary;
+
+    octokit.rest.checks.update({
+      ...github.context.repo,
+      check_run_id: id,
+      output: {summary: "new_summary",}
+      // output.summary,
+      // output.annotations[].path,
+      // output.annotations[].start_line,
+      // output.annotations[].end_line,
+      // output.annotations[].annotation_level,
+      // output.annotations[].message,
+      // output.images[].alt,
+      // output.images[].image_url,
+      // actions[].label,
+      // actions[].description,
+      // actions[].identifier
+    })
     
 
     // Cleanup post run for self hosted runners
