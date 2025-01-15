@@ -292,6 +292,7 @@ async function run() {
       check_run_id: id,
       // output: {summary: "new_summary"},
       output: {
+        title: myTestTitle,
         summary: "Hello new summary",
         annotations: [],
         images: [],
