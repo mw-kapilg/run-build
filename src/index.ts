@@ -272,12 +272,12 @@ async function run() {
       // - error: ${ error.message } 
     }
 
-    const get_response = await octokit.rest.checks.getSuite({
+    const get_response = await octokit.rest.checks.get({
       ...github.context.repo,
-      check_suite_id: id,
+      check_run_id: id,
     });
 
-    console.log(get_response.data);
+    console.log(get_response.data.output.summary);
     
 
     // Cleanup post run for self hosted runners
