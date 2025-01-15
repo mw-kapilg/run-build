@@ -281,8 +281,10 @@ async function run() {
 
     octokit.rest.checks.update({
       ...github.context.repo,
+      // ...get_response.data.output,
+      // ...get_response.data,
       check_run_id: id,
-      output: {summary: "new_summary",}
+      output: {summary: "new_summary"}
       // output.summary,
       // output.annotations[].path,
       // output.annotations[].start_line,
