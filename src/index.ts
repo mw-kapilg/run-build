@@ -275,8 +275,14 @@ async function run() {
       check_run_id: id,
     });
 
-    const response_summary = get_response.data.output.summary;
-    // console.log(get_response.data.output);
+    const annotations_response = await octokit.rest.checks.listAnnotations({
+      ...github.context.repo,
+      check_run_id: id,
+    });
+
+    const response_output = get_response.data.output;
+    console.log(response_output);
+    const response_summary = response_output.summary;
     var new_summary = response_summary;
 
     const update_response = await octokit.rest.checks.update({
@@ -284,22 +290,17 @@ async function run() {
       // ...get_response.data.output,
       // ...get_response.data,
       check_run_id: id,
-      // output: {summary: "new_summary"}
-      // output.summary,
-      // output.annotations[].path,
-      // output.annotations[].start_line,
-      // output.annotations[].end_line,
-      // output.annotations[].annotation_level,
-      // output.annotations[].message,
-      // output.images[].alt,
-      // output.images[].image_url,
-      // actions[].label,
-      // actions[].description,
-      // actions[].identifier
+      // output: {summary: "new_summary"},
+      output: {
+        summary: "Hello new summary",
+        annotations: [],
+        images: [],
+      },
+      actions: [],
     })
 
     console.log(update_response.status);
-    console.log(update_response.data.output.summary);
+    // console.log(update_response.data.output.summary);
     
 
     // Cleanup post run for self hosted runners
