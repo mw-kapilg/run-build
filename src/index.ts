@@ -266,7 +266,7 @@ async function run() {
     .addRaw(myTestSubtitle, true)
     .addRaw(myTestSummary3, true)
     // .addHeading('MATLAB Code Coverage')
-    // .addRaw(myCoverageSummary, true)
+    .addRaw(myCoverageSummary, true)
     .addRaw(myStackTrace)
     .addRaw(myFooter)
     .addRaw(myScript)
