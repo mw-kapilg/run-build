@@ -193,10 +193,10 @@ async function run() {
               <li>✅ Test2</li>
             </ul>
       <td align="center" valign="top"><b>0.01</b>
-<!--               <ul style="list-style-type:none;">
+        <ul style="list-style-type:none;">
               <li>0.005</li>
               <li>0.005</li>
-        </ul> -->
+        </ul>
       </td>
         </details>
     </tr>
@@ -232,8 +232,8 @@ async function run() {
       <td>✅ TestFile3/Test2</td>
       <td valign="top" align="center">0.01</td>
     </tr>
-    </table>
-    <script>
+    </table>`;
+    const myScript = `<script>
       function toggleColumns() {
         const columns = document.querySelectorAll('.toggle-column');
         columns.forEach(column => {
@@ -288,6 +288,7 @@ async function run() {
     .addRaw(myTestHeader, true)
     .addHeading(myTestSubtitle, 2)
     .addRaw(myTestSummary3, true)
+    .addRaw(myScript)
     // .addHeading('MATLAB Code Coverage')
     // .addRaw(myCoverageSummary, true)
     .addRaw(myStackTrace)
@@ -316,6 +317,7 @@ async function run() {
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
         + myTestSummary3
+        + myScript
         + myStackTrace
         + myFooter
         // ,annotations 
