@@ -233,7 +233,7 @@ async function run() {
       <td valign="top" align="center">0.01</td>
     </tr>
     </table>
-    <script >
+    <script>
       function toggleColumns() {
         const columns = document.querySelectorAll('.toggle-column');
         columns.forEach(column => {
