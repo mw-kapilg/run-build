@@ -265,11 +265,11 @@ async function run() {
     .addRaw(myTestHeader, true)
     .addRaw(myTestSubtitle, true)
     .addRaw(myTestSummary3, true)
-    .addRaw(myScript)
     // .addHeading('MATLAB Code Coverage')
     // .addRaw(myCoverageSummary, true)
     .addRaw(myStackTrace)
     .addRaw(myFooter)
+    .addRaw(myScript)
     .write()
 
     // createCheckWithAnnotations
@@ -294,9 +294,9 @@ async function run() {
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
         + myTestSummary
-        // + myScript
         + myStackTrace
         + myFooter
+        // + myScript
         // ,annotations 
       }
     };
