@@ -276,7 +276,7 @@ async function run() {
     });
 
     const response_summary = get_response.data.output.summary;
-    console.log(get_response.data.output);
+    // console.log(get_response.data.output);
     var new_summary = response_summary;
 
     octokit.rest.checks.update({
@@ -284,7 +284,7 @@ async function run() {
       // ...get_response.data.output,
       // ...get_response.data,
       check_run_id: id,
-      output: {summary: "new_summary"}
+      // output: {summary: "new_summary"}
       // output.summary,
       // output.annotations[].path,
       // output.annotations[].start_line,
