@@ -188,37 +188,13 @@ async function run() {
       <td>
         <details>
           <summary><b>✅ TestFile1</b></summary>
-            <ul style="list-style-type:none;">
+            <ul style="list-style-type: none;">
               <li>✅ Test1</li>
               <li>✅ Test2</li>
             </ul>
-      <td align="center" valign="top"><b>0.01</b>
-        <ul style="list-style-type:none;">
-              <li>0.005</li>
-              <li>0.005</li>
-        </ul>
-      </td>
         </details>
-    </tr>
-    <tr>
-      <td>✅ TestFile1/Test1</td>
-      <td align="center">0.005</td>
-    </tr>
-    <tr>
-      <td>✅ TestFile1/Test2</td>
-      <td align="center">0.005</td>
-    </tr>
-    <tr>
-      <td><b>✅ TestFile2</b>
-      <td align="center"><b>0.02</b></td>
-    </tr>
-    <tr>
-      <td>✅ TestFile2/Test1</td>
-      <td align="center">0.01</td>
-    </tr>
-    <tr>
-      <td>✅ TestFile2/Test2</td>
-      <td align="center">0.01</td>
+      <td align="center" valign="top"><b>0.01</b>
+      </td>
     </tr>
     <tr>
       <td><b>❌ TestFile3</b>
@@ -241,7 +217,7 @@ async function run() {
         });
       }
     </script>`;
-    const myStackTrace = `<details>c<h3><b>❌ <u>TestFile3/Test1 failed</u></b></h3>
+    const myStackTrace = `<details><h3><b>❌ <u>TestFile3/Test1 failed</u></b></h3>
         <details><summary>View stack trace</summary></br>
         <pre>Verification failed in TestExamples/testNonLeapYear.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    verifyEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n              1          2         -1          -0.5    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36</pre>
         </details></details>
