@@ -279,7 +279,7 @@ async function run() {
     // console.log(get_response.data.output);
     var new_summary = response_summary;
 
-    octokit.rest.checks.update({
+    const update_response = await octokit.rest.checks.update({
       ...github.context.repo,
       // ...get_response.data.output,
       // ...get_response.data,
@@ -297,6 +297,9 @@ async function run() {
       // actions[].description,
       // actions[].identifier
     })
+
+    console.log(update_response.status);
+    console.log(update_response.data.output.summary);
     
 
     // Cleanup post run for self hosted runners
