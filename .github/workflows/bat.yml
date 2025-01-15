@@ -58,6 +58,12 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - run: |
+          echo "Hello" > first.txt
+          cat first.txt
+      
+      - run: cat first.txt
+
       - name: Create annotation for error
         run: |
           echo "::error file=TestFile3/Test1,line=36,title=VerificationFailed::Verification failed in TestFile3/Test1"
