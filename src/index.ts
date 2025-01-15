@@ -263,7 +263,7 @@ async function run() {
     await core.summary
     .addHeading(myTestTitle)
     .addRaw(myTestHeader, true)
-    .addHeading(myTestSubtitle, 2)
+    .addRaw(myTestSubtitle, true)
     .addRaw(myTestSummary3, true)
     .addRaw(myScript)
     // .addHeading('MATLAB Code Coverage')
@@ -294,7 +294,7 @@ async function run() {
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
         + myTestSummary
-        + myScript
+        // + myScript
         + myStackTrace
         + myFooter
         // ,annotations 
