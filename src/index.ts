@@ -94,7 +94,7 @@ async function run() {
         <td>5.03</td>
     </tr>
     </table>`;
-    const myTestSubtitle = 'All tests';
+    const myTestSubtitle = '<details><summary><h3>All tests</h3></summary>';
     const myTestSummary = `<table>
     <tr>
       <th>Test</th>
@@ -208,7 +208,8 @@ async function run() {
       <td>✅ TestFile3/Test2</td>
       <td valign="top" align="center">0.01</td>
     </tr>
-    </table>`;
+    </table>
+    </details>`;
     const myScript = `<script>
       function toggleColumns() {
         const columns = document.querySelectorAll('.toggle-column');
@@ -217,7 +218,7 @@ async function run() {
         });
       }
     </script>`;
-    const myStackTrace = `<details><summary>View all failed tests</summary><h3><b>❌ <u>TestFile3/Test1 failed</u></b></h3>
+    const myStackTrace = `<details><summary><h3>Failed tests</h3></summary><h4><b>❌ <u>TestFile3/Test1 failed</u></b></h4>
         <details><summary>View stack trace</summary></br>
         <pre>Verification failed in TestExamples/testNonLeapYear.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    verifyEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n              1          2         -1          -0.5    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36</pre>
         </details></details>
@@ -292,7 +293,7 @@ async function run() {
         title: myTestTitle,
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
-        + myTestSummary3
+        + myTestSummary
         + myScript
         + myStackTrace
         + myFooter
