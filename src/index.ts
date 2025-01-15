@@ -179,6 +179,60 @@ async function run() {
       <td valign="top" align="center">0.01</td>
     </tr>
     </table>`;
+    const myTestSummary3 = `<table>
+    <tr>
+      <th>Test</th>
+      <th>Duration(s)</th>
+    </tr>
+    <tr>
+      <td>
+        <details>
+          <summary><b>✅ TestFile1</b></summary>
+            <ul style="list-style-type:none;">
+              <li>✅ Test1</li>
+              <li>✅ Test2</li>
+            </ul>
+      <td align="center" valign="top"><b>0.01</b>
+<!--               <ul style="list-style-type:none;">
+              <li>0.005</li>
+              <li>0.005</li>
+        </ul> -->
+      </td>
+        </details>
+    </tr>
+    <tr>
+      <td>✅ TestFile1/Test1</td>
+      <td align="center">0.005</td>
+    </tr>
+    <tr>
+      <td>✅ TestFile1/Test2</td>
+      <td align="center">0.005</td>
+    </tr>
+    <tr>
+      <td><b>✅ TestFile2</b>
+      <td align="center"><b>0.02</b></td>
+    </tr>
+    <tr>
+      <td>✅ TestFile2/Test1</td>
+      <td align="center">0.01</td>
+    </tr>
+    <tr>
+      <td>✅ TestFile2/Test2</td>
+      <td align="center">0.01</td>
+    </tr>
+    <tr>
+      <td><b>❌ TestFile3</b>
+      <td align="center"><b>5.00</b></td>
+    </tr>
+    <tr>
+      <td>❌ TestFile3/Test1</td>
+      <td valign="top" align="center">4.99</td>
+    </tr>
+    <tr>
+      <td>✅ TestFile3/Test2</td>
+      <td valign="top" align="center">0.01</td>
+    </tr>
+    </table>`;
     const myStackTrace = `<details>c<h3><b>❌ <u>TestFile3/Test1 failed</u></b></h3>
         <details><summary>View stack trace</summary></br>
         <pre>Verification failed in TestExamples/testNonLeapYear.\n    ---------------------\n    Framework Diagnostic:\n    ---------------------\n    verifyEqual failed.\n    --> The numeric values are not equal using \"isequaln\".\n    --> Failure table:\n            Actual    Expected    Error    RelativeError\n            ______    ________    _____    _____________\n              1          2         -1          -0.5    \n    Actual Value:\n         1\n    Expected Value:\n         2\n    ------------------\n    Stack Information:\n    ------------------\n    In C:\\Users\\kapilg\\jenkins visualization\\test-results\\jenkins-matlab-plugin\\work\\workspace\\visualization\\tests\\TestExamples.m (TestExamples.testNonLeapYear) at 36</pre>
@@ -225,7 +279,7 @@ async function run() {
     .addHeading(myTestTitle)
     .addRaw(myTestHeader, true)
     .addHeading(myTestSubtitle, 2)
-    .addRaw(myTestSummary, true)
+    .addRaw(myTestSummary3, true)
     // .addHeading('MATLAB Code Coverage')
     // .addRaw(myCoverageSummary, true)
     .addRaw(myStackTrace)
@@ -253,7 +307,7 @@ async function run() {
         title: myTestTitle,
         summary: myTestHeader
         + '<h3>' + myTestSubtitle + '</h3>'
-        + myTestSummary
+        + myTestSummary3
         + myStackTrace
         + myFooter
         // ,annotations 
@@ -270,37 +324,30 @@ async function run() {
       // - error: ${ error.message } 
     }
 
-    const get_response = await octokit.rest.checks.get({
-      ...github.context.repo,
-      check_run_id: id,
-    });
+    // const get_response = await octokit.rest.checks.get({
+    //   ...github.context.repo,
+    //   check_run_id: id,
+    // });
 
-    const annotations_response = await octokit.rest.checks.listAnnotations({
-      ...github.context.repo,
-      check_run_id: id,
-    });
+    // const response_output = get_response.data.output;
+    // // console.log(response_output);
 
-    const response_output = get_response.data.output;
-    console.log(response_output);
-    const response_summary = response_output.summary;
-    var new_summary = response_summary;
+    // const update_response = await octokit.rest.checks.update({
+    //   ...github.context.repo,
+    //   // ...get_response.data.output,
+    //   // ...get_response.data,
+    //   check_run_id: id,
+    //   // output: {summary: "new_summary"},
+    //   output: {
+    //     title: myTestTitle,
+    //     summary: "Hello new summary",
+    //     annotations: [],
+    //     images: [],
+    //   },
+    //   actions: [],
+    // })
 
-    const update_response = await octokit.rest.checks.update({
-      ...github.context.repo,
-      // ...get_response.data.output,
-      // ...get_response.data,
-      check_run_id: id,
-      // output: {summary: "new_summary"},
-      output: {
-        title: myTestTitle,
-        summary: "Hello new summary",
-        annotations: [],
-        images: [],
-      },
-      actions: [],
-    })
-
-    console.log(update_response.status);
+    // console.log(update_response.status);
     // console.log(update_response.data.output.summary);
     
 
