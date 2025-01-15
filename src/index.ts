@@ -247,6 +247,7 @@ async function run() {
       ...github.context.repo,
       head_sha: retrieveHeadSHA(),
       name: "MATLAB Job Summary",
+      // status: "completed",
       // conclusion: "success",
       output: {
         title: myTestTitle,
@@ -259,12 +260,24 @@ async function run() {
       }
     };
   
+    var id = null;
     try {
-      await octokit.rest.checks.create(checkRequest);
+      const response = await octokit.rest.checks.create(checkRequest);
+      console.log("hello");
+      console.log(response.data);
+      console.log(response.data.id);
+      id = response.data.id;
     } catch (error) {
       throw new Error(`Request to create annotations failed - request: ${ JSON.stringify(checkRequest) }`);
       // - error: ${ error.message } 
     }
+
+    const get_response = await octokit.rest.checks.getSuite({
+      ...github.context.repo,
+      check_suite_id: id,
+    });
+
+    console.log(get_response.data);
     
 
     // Cleanup post run for self hosted runners
