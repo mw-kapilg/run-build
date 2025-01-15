@@ -226,7 +226,7 @@ async function run() {
     const myCoverageSummary = `<table>
     <tr>
         <td valign="top">Function</td>
-        <td align="center"><img src="https://progress-bar.xyz/100"></td>
+        <td align="center"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ868djAR5mIlAFnnjF---4paarCg48aQTr-g&s"></td>
     </tr>
     <tr>
         <td valign="middle">Statement</td>
